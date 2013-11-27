@@ -55,3 +55,25 @@ github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+# customize
+github "chrome"
+
+github "macvim_kaoriya", "1.0.0", :repo => "boxelly/puppet-macvim_kaoriya"
+github "php",        "1.1.4"
+github "wget"
+github "autoconf"
+github "libtool"
+github "pkgconfig"
+github "pcre"
+github "libpng"
+github "mysql"
+github "openssl"
+github "skype"
+github "virtualbox"
+github "osx"
+github "zsh"
+github "ctags"
+
+#github "mongodb",    "1.0.4"
+
