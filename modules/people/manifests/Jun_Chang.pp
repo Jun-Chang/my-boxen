@@ -9,8 +9,8 @@ class people::jun_chang {
 
     ## php
     include openssl
+    include php::5_3_27
     include php::5_4_17
-    include php::5_3_9
 
     include php::composer
 
@@ -18,13 +18,13 @@ class people::jun_chang {
         version => '5.4.17'
     }
 
-    php::extension::apc { "apc for 5.3.9":
-        php     => '5.3.9',
+    php::extension::apc { "apc for 5.3.27":
+        php     => '5.3.27',
         version => '3.1.13',
     }
 
     include php::fpm::5_4_17
-    include php::fpm::5_3_9
+    include php::fpm::5_3_27
 
     ## mysql
     mysql::db { 'mydb': }
@@ -57,6 +57,7 @@ class people::jun_chang {
     ## apps
     include skype
     include virtualbox
+    include dropbox
 
     package {
         'mi':
@@ -69,7 +70,7 @@ class people::jun_chang {
 
     ## settings
     $home     = "/Users/${::luser}"
-    $dotfiles = "${home}/dotsfiles"
+    $dotfiles = "${home}/dotfiles"
     exec { "osx-settings":
       cwd => $dotfiles,
       command => "sh ${dotfiles}/osx -s",
